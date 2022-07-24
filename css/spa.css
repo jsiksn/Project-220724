@@ -1,0 +1,22 @@
+li{ list-style: none; }
+main > section{ height: calc(100vh - 200px); }
+/* 닫기로 노출되면 그 아래 네비게이션은 아래 스타일을 적용하라 */
+#gnb{ text-transform: uppercase; }
+.xi-close + ul{
+    display: flex !important;
+    /* 가로, 세로 내 마음대로 레이아웃 */
+    flex-direction: column; /* 세로 정렬 */
+    justify-content: center; /* 세로가 justify 축 */
+    align-items: center; /* 가로 정렬 */
+    
+    position: fixed;
+    /* 레이아웃의 기준 포지션이 1순위 */
+    left: 0; right: 0;
+    /* 기준과 동시에 너비 계산 - width 100% */
+    background-color: black;
+    line-height: 2;
+    top: 3rem; bottom: 0;
+    color: white !important;
+}
+.xi-close + ul a{ color: white; }
+.xi-close + ul li{ width: 100%; }
